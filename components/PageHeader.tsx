@@ -7,7 +7,7 @@ const Circuit = ({ flip = false }: { flip?: boolean }) => (
 // En-tête de page : pastille, titre avec accent dégradé, sous-titre, circuits décoratifs.
 export default function PageHeader({ label, title, accent, subtitle }: { label: string; title?: string; accent: string; subtitle?: string }) {
   return <section className="relative overflow-hidden bg-gradient-to-b from-white to-[#f3f9ff] px-6 pb-12 pt-10 text-center">
-    <Circuit /><Circuit flip />
+    <div aria-hidden className="circuit-bg pointer-events-none absolute inset-0 opacity-60 [mask-image:linear-gradient(to_bottom,black,transparent)]" /><Circuit /><Circuit flip />
     <div className="relative mx-auto flex max-w-2xl items-center justify-center gap-3">
       <span className="h-px flex-1 bg-gradient-to-r from-transparent to-sky/70" />
       <span className="rounded-full border-2 border-electric px-5 py-1 text-base font-medium text-electric">{label}</span>

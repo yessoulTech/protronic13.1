@@ -4,7 +4,7 @@ export default function ProductCard({ p }: { p: Product }) {
   return <Link href={`/store/${p.slug}`} className="group block rounded-3xl bg-mist p-5 transition hover:-translate-y-1 hover:shadow-xl">
     <div className="relative mb-4 grid aspect-square place-items-center overflow-hidden rounded-2xl bg-gradient-to-br from-white to-[#e3f3fd] transition group-hover:scale-[1.02]">
       <ProductImage p={p} />
-      {p.badge && <span className="absolute left-3 top-3 rounded-full bg-navy px-3 py-1 text-xs text-white">{p.badge}</span>}
+      {p.badge && <span className="absolute left-3 top-3 z-10 rounded-full bg-navy px-3 py-1 text-xs text-white">{p.badge}</span>}
     </div>
     <p className="text-xs uppercase tracking-wider text-ink/50">{p.category}</p>
     <h3 className="mt-1 font-semibold leading-snug">{p.name}</h3>

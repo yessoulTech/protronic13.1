@@ -8,7 +8,7 @@ export default function ProductPage({ params }: Props) {
   const label = `${p.name}${p.spec ? ` ${p.spec}` : ""}`;
   return <div className="container-x py-12"><Link href="/store" className="text-electric hover:underline">‹ Retour au store</Link>
     <div className="mt-8 grid gap-10 md:grid-cols-2">
-      <div className="relative grid aspect-square place-items-center overflow-hidden rounded-3xl bg-gradient-to-br from-mist to-[#dff1fc]"><ProductImage p={p} priority sizes="50vw" /></div>
+      <div className="relative grid aspect-square place-items-center overflow-hidden rounded-3xl bg-gradient-to-br from-mist to-[#dff1fc]"><ProductImage p={p} priority sizes="50vw" arrows /></div>
       <div className="self-center"><p className="text-sm uppercase tracking-wider text-ink/50">{p.category}</p>
         <h1 className="mt-2 text-4xl font-semibold tracking-tight">{p.name}</h1>{p.spec && <p className="mt-1 text-lg text-ink/60">{p.spec}</p>}
         <p className="mt-4 text-2xl text-navy">{formatPrice(p.price)}</p>{p.stock && <p className="mt-1 text-ink/60">{STOCK_LABEL[p.stock]}</p>}

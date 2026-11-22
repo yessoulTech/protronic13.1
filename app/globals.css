@@ -12,3 +12,10 @@ body { @apply bg-white text-ink font-sans; letter-spacing: -0.011em; }
   .glow { background: radial-gradient(60% 50% at 50% 0%, rgba(0,191,255,.22), transparent 70%); }
 }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+
+/* Ambiance électronique */
+.circuit-bg { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140' fill='none' stroke='%2300BFFF' stroke-opacity='.28' stroke-width='1'%3E%3Cpath d='M0 35h45l18 18h40M70 0v28l24 24M140 95h-34l-18 18v27M0 105h30l18-18'/%3E%3Ccircle cx='103' cy='53' r='2.5' fill='%2300BFFF' stroke='none'/%3E%3Ccircle cx='45' cy='35' r='2.5' fill='%2300BFFF' stroke='none'/%3E%3Ccircle cx='88' cy='113' r='2.5' fill='%2300BFFF' stroke='none'/%3E%3C/svg%3E"); }
+.circuit-bg-light { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140' fill='none' stroke='%23ffffff' stroke-opacity='.22' stroke-width='1'%3E%3Cpath d='M0 35h45l18 18h40M70 0v28l24 24M140 95h-34l-18 18v27M0 105h30l18-18'/%3E%3Ccircle cx='103' cy='53' r='2.5' fill='%23ffffff' stroke='none'/%3E%3Ccircle cx='45' cy='35' r='2.5' fill='%23ffffff' stroke='none'/%3E%3C/svg%3E"); }
+.trace { stroke-dasharray: 6 10; animation: dash 5s linear infinite; }
+@keyframes dash { to { stroke-dashoffset: -160; } }
+.no-scrollbar { scrollbar-width: none; } .no-scrollbar::-webkit-scrollbar { display: none; }

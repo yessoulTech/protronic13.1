@@ -1,4 +1,5 @@
-import type { Metadata } from "next"; import "./globals.css";
+import type { Metadata } from "next"; import "./globals.css"; import { Orbitron } from "next/font/google";
+const tech = Orbitron({ subsets: ["latin"], variable: "--font-tech", display: "swap" });
 import Header from "@/components/Header"; import Footer from "@/components/Footer"; import { SITE } from "@/lib/config";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -9,6 +10,6 @@ export const metadata: Metadata = {
 const ld = { "@context": "https://schema.org", "@type": "ElectronicsRepairShop", name: SITE.name, telephone: SITE.tel, url: SITE.url,
   address: { "@type": "PostalAddress", streetAddress: "19 Cours Franklin Roosevelt", postalCode: "13001", addressLocality: "Marseille", addressCountry: "FR" } };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="fr"><body><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
+  return <html lang="fr" className={tech.variable}><body><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
     <Header /><main>{children}</main><Footer /></body></html>;
 }
