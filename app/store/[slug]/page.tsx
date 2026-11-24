@@ -11,7 +11,7 @@ export default function ProductPage({ params }: Props) {
       <div className="relative grid aspect-square place-items-center overflow-hidden rounded-3xl bg-gradient-to-br from-mist to-[#dff1fc]"><ProductImage p={p} priority sizes="50vw" arrows /></div>
       <div className="self-center"><p className="text-sm uppercase tracking-wider text-ink/50">{p.category}</p>
         <h1 className="mt-2 text-4xl font-semibold tracking-tight">{p.name}</h1>{p.spec && <p className="mt-1 text-lg text-ink/60">{p.spec}</p>}
-        <p className="mt-4 text-2xl text-navy">{formatPrice(p.price)}</p>{p.stock && <p className="mt-1 text-ink/60">{STOCK_LABEL[p.stock]}</p>}
+        <p className="mt-4 inline-flex rounded-full bg-gradient-to-r from-navy to-electric px-5 py-2.5 text-2xl font-bold text-white shadow-lg shadow-electric/20">{formatPrice(p.price)}</p>{p.stock && <p className="mt-2 text-ink/60">{STOCK_LABEL[p.stock]}</p>}
         <p className="mt-6 text-ink/70">{p.description}</p>
         <a href={waLink(`Bonjour ProTronic13, je souhaite commander : ${label} (${formatPrice(p.price)}).`)} target="_blank" rel="noopener noreferrer" className="btn-wa mt-8">Commander sur WhatsApp</a></div>
     </div></div>;

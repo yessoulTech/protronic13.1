@@ -5,14 +5,14 @@ export default function Header() {
   const path = usePathname(); const router = useRouter();
   const [open, setOpen] = useState(false); const [search, setSearch] = useState(false); const [q, setQ] = useState("");
   const go = (e: React.FormEvent) => { e.preventDefault(); router.push(`/store?q=${encodeURIComponent(q)}`); setSearch(false); setOpen(false); };
-  return <header className="sticky top-0 z-50 border-b border-black/5 bg-white/75 backdrop-blur-xl">
+  return <header className="sticky top-0 z-50 border-b border-white/10 bg-gradient-to-r from-navy via-[#0054b8] to-electric text-white shadow-[0_10px_30px_rgba(0,59,142,.18)]">
     <div className="container-x flex h-14 items-center justify-between gap-4">
       <Logo />
       <nav className="hidden lg:flex items-center gap-7 text-sm" aria-label="Navigation principale">
-        {NAV.map(n => <Link key={n.href} href={n.href} className={`transition hover:text-electric ${(n.href === "/" ? path === "/" : path.startsWith(n.href)) ? "text-electric font-medium" : "text-ink/75"}`}>{n.label}</Link>)}
+        {NAV.map(n => <Link key={n.href} href={n.href} className={`transition hover:text-sky ${(n.href === "/" ? path === "/" : path.startsWith(n.href)) ? "text-sky font-bold" : "text-white/85"}`}>{n.label}</Link>)}
       </nav>
       <div className="flex items-center gap-2">
-        <button aria-label="Rechercher" onClick={() => setSearch(s => !s)} className="rounded-full p-2 hover:bg-black/5">
+        <button aria-label="Rechercher" onClick={() => setSearch(s => !s)} className="rounded-full p-2 text-white transition hover:bg-white/10">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
         <SocialButtons className="hidden sm:flex" />
         <a href={waLink("Bonjour ProTronic13 !")} target="_blank" rel="noopener noreferrer" className="btn-wa !py-1.5 !px-4 !text-sm hidden sm:inline-flex">WhatsApp</a>

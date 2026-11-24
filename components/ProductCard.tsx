@@ -9,7 +9,7 @@ export default function ProductCard({ p }: { p: Product }) {
     <p className="text-xs uppercase tracking-wider text-ink/50">{p.category}</p>
     <h3 className="mt-1 font-semibold leading-snug">{p.name}</h3>
     {p.spec && <p className="text-sm text-ink/60">{p.spec}</p>}
-    <p className="mt-2 text-lg font-medium text-navy">{formatPrice(p.price)}</p>
+    <p className="mt-3 inline-flex rounded-full bg-gradient-to-r from-navy to-electric px-4 py-2 text-lg font-bold text-white shadow-md shadow-electric/20">{formatPrice(p.price)}</p>
     {p.stock && <p className="mt-1 text-sm text-ink/60">{STOCK_LABEL[p.stock]}</p>}
   </Link>;
 }

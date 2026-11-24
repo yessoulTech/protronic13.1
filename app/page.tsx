@@ -10,15 +10,18 @@ export default function Home() {
     <section className="relative isolate overflow-hidden bg-gradient-to-b from-white via-[#eef6ff] to-[#dcecff] text-navy">
       <div className="glow absolute inset-0 -z-10" /><div className="circuit-bg absolute inset-0 -z-10 opacity-70 [mask-image:linear-gradient(to_bottom,black,transparent_90%)]" /><CircuitBackground />
       <div className="container-x flex min-h-[88vh] flex-col items-center justify-center py-20 text-center">
-        <p className="mb-5 font-tech text-[11px] uppercase tracking-[0.3em] text-electric sm:text-xs">ProTronic13 · Maître de la technologie</p>
+        <p className="mb-5 inline-flex animate-pulse rounded-full border border-electric/30 bg-white/75 px-4 py-2 font-tech text-[11px] font-bold uppercase tracking-[0.3em] text-electric shadow-sm backdrop-blur-sm sm:text-xs">ProTronic13 · Maître de la technologie</p>
         <h1 className="max-w-4xl font-tech text-3xl font-bold leading-tight tracking-wide sm:text-5xl lg:text-6xl">La Technologie <span className="bg-gradient-to-r from-navy via-electric to-sky bg-clip-text text-transparent">Entre De Bonnes Mains</span></h1>
-        <p className="mt-5 font-tech text-xs font-medium uppercase tracking-[0.22em] text-electric sm:text-sm">Donne une seconde vie à vos appareils</p>
+        <p className="mt-5 inline-flex rounded-xl border border-electric/20 bg-white/70 px-5 py-3 font-tech text-xs font-bold uppercase tracking-[0.22em] text-electric shadow-md backdrop-blur-sm sm:text-sm">DONNE UNE SECONDE VIE À VOS APPAREILS</p>
         <p className="mt-5 max-w-xl text-lg text-ink/60">Réparation de cartes mères, microsoudure et électronique de précision à Marseille.</p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Link href="/devis" className="btn-primary">Demander un devis</Link>
           <a href={waLink("Bonjour ProTronic13, j'aimerais des informations.")} target="_blank" rel="noopener noreferrer" className="btn-wa">WhatsApp</a>
         </div>
-        <Image src="/logo.png" alt="Logo ProTronic13" width={420} height={420} priority className="mt-10 h-auto w-64 animate-float drop-shadow-[0_20px_40px_rgba(0,102,217,.35)] sm:w-80" />
+        <div className="relative mt-10 w-screen max-w-none overflow-hidden">
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#dcecff] to-transparent" />
+          <Image src="/image.png" alt="Technologie ProTronic13" width={1536} height={1024} priority sizes="100vw" className="h-auto w-full object-cover animate-hero-reveal" />
+        </div>
       </div>
     </section>
     <section className="container-x py-24">
